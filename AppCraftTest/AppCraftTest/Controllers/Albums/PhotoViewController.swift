@@ -46,8 +46,9 @@ class PhotoViewController: UIViewController {
             
             DispatchQueue.main.async {
                 guard let image = UIImage(data: imageData) else {return}
-                self.imageScrollView.set(image: image)
+                self.imageScrollView.centerImage(image: image)
             }
         }
     }
+    
 }

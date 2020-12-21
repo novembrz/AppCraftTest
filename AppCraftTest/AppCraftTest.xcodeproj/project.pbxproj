@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,8 @@
 		C2536AE5258FC5DE0070ACF7 /* AlbumsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2536AE4258FC5DE0070ACF7 /* AlbumsCell.swift */; };
 		C2536AF5258FE6130070ACF7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2536AF4258FE6130070ACF7 /* PhotoViewController.swift */; };
 		C2536AF9258FE7180070ACF7 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2536AF8258FE7180070ACF7 /* ImageScrollView.swift */; };
+		C27C2B0B2590D7FC0004C627 /* GeoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27C2B0A2590D7FC0004C627 /* GeoViewController.swift */; };
+		C27C2B122590E0260004C627 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27C2B112590E0260004C627 /* LocationManager.swift */; };
 		C2CEA0F12590B490005A0E3B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CEA0F02590B490005A0E3B /* RealmManager.swift */; };
 		C2CEA0F42590B498005A0E3B /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CEA0F32590B498005A0E3B /* RealmModel.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +48,8 @@
 		C2536AE4258FC5DE0070ACF7 /* AlbumsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsCell.swift; sourceTree = "<group>"; };
 		C2536AF4258FE6130070ACF7 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		C2536AF8258FE7180070ACF7 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
+		C27C2B0A2590D7FC0004C627 /* GeoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoViewController.swift; sourceTree = "<group>"; };
+		C27C2B112590E0260004C627 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		C2CEA0F02590B490005A0E3B /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		C2CEA0F32590B498005A0E3B /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,7 +72,6 @@
 				234958288A189609D6C2FA72 /* Pods-AppCraftTest.debug.xcconfig */,
 				6DBEF7C4F451B842E0495EE4 /* Pods-AppCraftTest.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -152,10 +155,8 @@
 		C2536AEB258FC6AE0070ACF7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C2536AE1258FC5CE0070ACF7 /* AlbumsViewController.swift */,
-				C20A28E5258E18880009F634 /* PhotoListViewController.swift */,
-				C2536AF4258FE6130070ACF7 /* PhotoViewController.swift */,
-				C2536AEC258FC6B70070ACF7 /* Cells */,
+				C27C2B082590D7D40004C627 /* Albums */,
+				C27C2B0A2590D7FC0004C627 /* GeoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -173,8 +174,20 @@
 			isa = PBXGroup;
 			children = (
 				C2536AF8258FE7180070ACF7 /* ImageScrollView.swift */,
+				C27C2B112590E0260004C627 /* LocationManager.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C27C2B082590D7D40004C627 /* Albums */ = {
+			isa = PBXGroup;
+			children = (
+				C2536AE1258FC5CE0070ACF7 /* AlbumsViewController.swift */,
+				C20A28E5258E18880009F634 /* PhotoListViewController.swift */,
+				C2536AF4258FE6130070ACF7 /* PhotoViewController.swift */,
+				C2536AEC258FC6B70070ACF7 /* Cells */,
+			);
+			path = Albums;
 			sourceTree = "<group>";
 		};
 		C2CEA0EF2590B478005A0E3B /* Realm */ = {
@@ -308,7 +321,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C27C2B0B2590D7FC0004C627 /* GeoViewController.swift in Sources */,
 				C2536AE2258FC5CE0070ACF7 /* AlbumsViewController.swift in Sources */,
+				C27C2B122590E0260004C627 /* LocationManager.swift in Sources */,
 				C20A28E3258E18810009F634 /* PhotoCell.swift in Sources */,
 				C20A28E6258E18880009F634 /* PhotoListViewController.swift in Sources */,
 				C20A28DD258E15790009F634 /* AlbumModel.swift in Sources */,

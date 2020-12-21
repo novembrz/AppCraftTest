@@ -10,7 +10,7 @@ import UIKit
 class ImageScrollView: UIScrollView, UIScrollViewDelegate {
     
     var imageView: UIImageView!
-    
+
     lazy var zoomingTap: UITapGestureRecognizer = {
         let zoomingTap = UITapGestureRecognizer(target: self, action: #selector(handleZoomingTap))
         zoomingTap.numberOfTapsRequired = 2
@@ -26,19 +26,28 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         self.decelerationRate = UIScrollView.DecelerationRate.fast
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        self.centerImage()
-    }
-    
-    func set(image: UIImage) {
-//        imageView?.removeFromSuperview()
-//        imageView = nil
+    func centerImage(image: UIImage){
+        
         imageView = UIImageView(image: image)
         self.addSubview(imageView)
-        print(image)
-        
         configureFor(size: image.size)
+        
+        let boundsSize = self.bounds.size
+        var frameToCenter = imageView.frame
+
+        if frameToCenter.size.width < boundsSize.width {
+            frameToCenter.origin.x = (boundsSize.width - frameToCenter.size.width) / 3
+        } else {
+            frameToCenter.origin.x = 0
+        }
+
+        if frameToCenter.size.height < boundsSize.height {
+            frameToCenter.origin.y = (boundsSize.height - frameToCenter.size.height) / 3
+        } else {
+            frameToCenter.origin.y = 0
+        }
+
+        imageView.frame = frameToCenter
     }
     
     func configureFor(size: CGSize) {
@@ -50,7 +59,9 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         self.imageView.isUserInteractionEnabled = true
     }
     
+    
     // расчеты чтобы при зуме картинка при отпускании возвращ в изнач размер
+    
     func setZoomScale(){
         let boundsSize = self.bounds.size //зафиксировали рамки
         let imageSize = imageView.bounds.size //зафиксировали рамер картинки
@@ -70,26 +81,6 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         
         self.minimumZoomScale = minScale
         self.maximumZoomScale = maxScale
-    }
-    
-    func centerImage(){
-//        let boundsSize = self.bounds.size
-//        print(imageView as Any)
-//        var frameToCenter = imageView.frame
-//
-//        if frameToCenter.size.width < boundsSize.width {
-//            frameToCenter.origin.x = (boundsSize.width - frameToCenter.size.width) / 2
-//        } else {
-//            frameToCenter.origin.x = 0
-//        }
-//
-//        if frameToCenter.size.height < boundsSize.height {
-//            frameToCenter.origin.y = (boundsSize.height - frameToCenter.size.height) / 2
-//        } else {
-//            frameToCenter.origin.y = 0
-//        }
-//
-//        imageView.frame = frameToCenter
     }
     
     //MARK: UITapGestureRecognizer
@@ -135,9 +126,4 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return self.imageView
     }
-    
-    func scrollViewDidZoom(_ scrollView: UIScrollView) {
-        self.centerImage()
-    }
-    
 }
