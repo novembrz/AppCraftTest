@@ -9,14 +9,31 @@ import UIKit
 
 class PhotoViewController: UIViewController {
     
-    var imageScrollView: ImageScrollView!
     var imageString: String?
+    var imageView = UIImageView()
+    
+    var imageScrollView: ImageScrollView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupConstraints()
         getImage()
+    }
+    
+    func setupConstraints(){
+        
+        imageScrollView = ImageScrollView(frame: view.bounds)
+        view.addSubview(imageScrollView)
+        
+        imageScrollView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            imageScrollView.topAnchor.constraint(equalTo: view.topAnchor),
+            imageScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            imageScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            imageScrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
     
     func getImage(){
@@ -33,19 +50,4 @@ class PhotoViewController: UIViewController {
             }
         }
     }
-    
-    func setupConstraints() {
-        
-        imageScrollView = ImageScrollView(frame: view.bounds)
-        view.addSubview(imageScrollView)
-        imageScrollView.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            imageScrollView.topAnchor.constraint(equalTo: view.topAnchor),
-            imageScrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            imageScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            imageScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
-        ])
-    }
-
 }

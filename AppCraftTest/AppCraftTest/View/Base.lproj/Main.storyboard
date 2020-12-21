@@ -122,9 +122,16 @@
                             <outlet property="delegate" destination="846-fV-wAD" id="Xaf-dI-7KN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Photos" id="h8M-SI-8R8"/>
+                    <navigationItem key="navigationItem" title="Photos" id="h8M-SI-8R8">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="heart" catalog="system" id="JQp-1g-7C4">
+                            <connections>
+                                <action selector="saveAlbumButtonTapped:" destination="846-fV-wAD" id="mam-CK-BGR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="8tC-rS-kbx" id="DSU-8H-ULn"/>
+                        <outlet property="saveAlbumButton" destination="JQp-1g-7C4" id="0lk-SS-jbP"/>
                         <segue destination="7U0-vm-84I" kind="show" identifier="photoSegue" id="irv-b8-GZf"/>
                     </connections>
                 </tableViewController>
@@ -168,6 +175,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -10,6 +10,7 @@ import UIKit
 class PhotoListViewController: UITableViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var saveAlbumButton: UIBarButtonItem!
     
     private var photos = [PhotoModel]()
     var id: String?
@@ -42,14 +43,18 @@ class PhotoListViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        guard segue.identifier == "photoCell" else {return}
+        guard segue.identifier == "photoSegue" else {return}
         
         let indexPath = tableView.indexPathForSelectedRow!
         let photoVC = segue.destination as! PhotoViewController
-        
+
         let photo = photos[indexPath.row]
         photoVC.imageString = photo.url
     }
+    
+    @IBAction func saveAlbumButtonTapped(_ sender: UIBarButtonItem) {
+    }
+    
 
     // MARK: - Table view data source
 
