@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class PhotoListViewController: UITableViewController {
     
@@ -14,6 +15,7 @@ class PhotoListViewController: UITableViewController {
     
     private var photos = [PhotoModel]()
     var id: String?
+    var albumTitle: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +54,29 @@ class PhotoListViewController: UITableViewController {
     }
     
     @IBAction func saveAlbumButtonTapped(_ sender: UIBarButtonItem) {
+        
+        guard let albumTitle = albumTitle else {return}
+        let favPhotos = List<PhotoRealmModel>()
+        
+        DispatchQueue.global().async {
+            
+            for el in self.photos{
+                guard let imageURL = URL(string: el.url) else {return}
+                guard let imageData = try? Data(contentsOf: imageURL) else {return}
+                
+                guard let imageThURL = URL(string: el.thumbnailUrl) else {return}
+                guard let imageThData = try? Data(contentsOf: imageThURL) else {return}
+                
+                let favPhoto = PhotoRealmModel(title: el.title, imageData: imageData, imageThData: imageThData)
+                favPhotos.append(favPhoto)
+                print(favPhotos)
+            }
+            
+            let favAlbum = AlbumRealmModel(title: albumTitle, photos: favPhotos)
+            RealmManager.saveObject(favAlbum)
+            print("ВЫШЛО ВЫШЛО ВЫШЛО ВЫШЛО ВЫШЛО ВЫШЛО ВЫШЛО ВЫШЛО ВЫШЛО ВЫШЛО ВЫШЛО ВЫШЛО ВЫШЛО ВЫШЛО")
+            print(Realm.Configuration.defaultConfiguration.fileURL!)
+        }
     }
     
 

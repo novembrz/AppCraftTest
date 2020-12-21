@@ -24,6 +24,9 @@
 		C2536AF9258FE7180070ACF7 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2536AF8258FE7180070ACF7 /* ImageScrollView.swift */; };
 		C27C2B0B2590D7FC0004C627 /* GeoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27C2B0A2590D7FC0004C627 /* GeoViewController.swift */; };
 		C27C2B122590E0260004C627 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27C2B112590E0260004C627 /* LocationManager.swift */; };
+		C2966EFB25910A7A00BEBDFF /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2966EFA25910A7A00BEBDFF /* FavouriteViewController.swift */; };
+		C2966EFE25910A8D00BEBDFF /* FavPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2966EFD25910A8D00BEBDFF /* FavPhotoViewController.swift */; };
+		C2966F0225910BA500BEBDFF /* FavAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2966F0125910BA500BEBDFF /* FavAlbumCell.swift */; };
 		C2CEA0F12590B490005A0E3B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CEA0F02590B490005A0E3B /* RealmManager.swift */; };
 		C2CEA0F42590B498005A0E3B /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CEA0F32590B498005A0E3B /* RealmModel.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +53,9 @@
 		C2536AF8258FE7180070ACF7 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
 		C27C2B0A2590D7FC0004C627 /* GeoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoViewController.swift; sourceTree = "<group>"; };
 		C27C2B112590E0260004C627 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		C2966EFA25910A7A00BEBDFF /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
+		C2966EFD25910A8D00BEBDFF /* FavPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavPhotoViewController.swift; sourceTree = "<group>"; };
+		C2966F0125910BA500BEBDFF /* FavAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavAlbumCell.swift; sourceTree = "<group>"; };
 		C2CEA0F02590B490005A0E3B /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		C2CEA0F32590B498005A0E3B /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,8 +106,8 @@
 				C20A28D7258E12680009F634 /* Services */,
 				C2CEA0EF2590B478005A0E3B /* Realm */,
 				C2536AE7258FC6560070ACF7 /* Models */,
-				C2536AEB258FC6AE0070ACF7 /* Controllers */,
 				C2536AEA258FC6A10070ACF7 /* View */,
+				C2536AEB258FC6AE0070ACF7 /* Controllers */,
 				C2536AF7258FE6E90070ACF7 /* Helpers */,
 				C20A28D6258E11820009F634 /* Supporting files */,
 			);
@@ -156,6 +162,9 @@
 			isa = PBXGroup;
 			children = (
 				C27C2B082590D7D40004C627 /* Albums */,
+				C2966EFA25910A7A00BEBDFF /* FavouriteViewController.swift */,
+				C2966EFD25910A8D00BEBDFF /* FavPhotoViewController.swift */,
+				C2966F0125910BA500BEBDFF /* FavAlbumCell.swift */,
 				C27C2B0A2590D7FC0004C627 /* GeoViewController.swift */,
 			);
 			path = Controllers;
@@ -322,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C27C2B0B2590D7FC0004C627 /* GeoViewController.swift in Sources */,
+				C2966F0225910BA500BEBDFF /* FavAlbumCell.swift in Sources */,
 				C2536AE2258FC5CE0070ACF7 /* AlbumsViewController.swift in Sources */,
 				C27C2B122590E0260004C627 /* LocationManager.swift in Sources */,
 				C20A28E3258E18810009F634 /* PhotoCell.swift in Sources */,
@@ -330,9 +340,11 @@
 				C20A28D9258E12B70009F634 /* NetworkManager.swift in Sources */,
 				C2CEA0F12590B490005A0E3B /* RealmManager.swift in Sources */,
 				C2536AF9258FE7180070ACF7 /* ImageScrollView.swift in Sources */,
+				C2966EFE25910A8D00BEBDFF /* FavPhotoViewController.swift in Sources */,
 				C2536AE5258FC5DE0070ACF7 /* AlbumsCell.swift in Sources */,
 				C2536ADD258FC2D40070ACF7 /* PhotoModel.swift in Sources */,
 				C20A28BD258E10D90009F634 /* AppDelegate.swift in Sources */,
+				C2966EFB25910A7A00BEBDFF /* FavouriteViewController.swift in Sources */,
 				C20A28BF258E10D90009F634 /* SceneDelegate.swift in Sources */,
 				C2CEA0F42590B498005A0E3B /* RealmModel.swift in Sources */,
 				C2536AF5258FE6130070ACF7 /* PhotoViewController.swift in Sources */,

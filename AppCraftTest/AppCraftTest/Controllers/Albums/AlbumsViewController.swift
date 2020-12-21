@@ -44,6 +44,7 @@ class AlbumsViewController: UITableViewController {
         
         let album = albums[indexPath.row]
         photosVC.id = String(album.id)
+        photosVC.albumTitle = album.title
     }
 
     // MARK: - Table view data source
