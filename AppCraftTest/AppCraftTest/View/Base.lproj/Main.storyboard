@@ -81,7 +81,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="searchCurrentGeoTapped:" destination="hhP-tQ-0ZR" eventType="touchUpInside" id="IGJ-MN-bDs"/>
+                                    <action selector="geoButtonTapped:" destination="hhP-tQ-0ZR" eventType="touchUpInside" id="8mH-Zl-Qws"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MzC-AT-Zg3">
@@ -107,7 +107,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Geo" id="YVD-S1-20T"/>
                     <connections>
-                        <outlet property="currentGeoTextView" destination="MzC-AT-Zg3" id="gHl-Bd-yg0"/>
+                        <outlet property="geoButton" destination="3My-62-OtC" id="axr-xt-sEG"/>
+                        <outlet property="geoTextView" destination="MzC-AT-Zg3" id="BKg-va-qNQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3E9-AB-AzD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

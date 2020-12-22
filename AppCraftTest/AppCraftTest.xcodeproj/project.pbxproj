@@ -22,12 +22,13 @@
 		C2536AE5258FC5DE0070ACF7 /* AlbumsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2536AE4258FC5DE0070ACF7 /* AlbumsCell.swift */; };
 		C2536AF5258FE6130070ACF7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2536AF4258FE6130070ACF7 /* PhotoViewController.swift */; };
 		C2536AF9258FE7180070ACF7 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2536AF8258FE7180070ACF7 /* ImageScrollView.swift */; };
-		C27C2B0B2590D7FC0004C627 /* GeoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27C2B0A2590D7FC0004C627 /* GeoViewController.swift */; };
-		C27C2B122590E0260004C627 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27C2B112590E0260004C627 /* LocationManager.swift */; };
 		C2966EFB25910A7A00BEBDFF /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2966EFA25910A7A00BEBDFF /* FavouriteViewController.swift */; };
+		C2CE168F25928D1A0046A051 /* DownloadAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE168E25928D1A0046A051 /* DownloadAlert.swift */; };
+		C2CE169625928EC60046A051 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE169525928EC60046A051 /* ActionView.swift */; };
 		C2CEA0F12590B490005A0E3B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CEA0F02590B490005A0E3B /* RealmManager.swift */; };
 		C2CEA0F42590B498005A0E3B /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CEA0F32590B498005A0E3B /* RealmModel.swift */; };
 		C2EC82BD25927A16007385EF /* FavAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC82BC25927A16007385EF /* FavAlbumCell.swift */; };
+		C2EC82C325927EF9007385EF /* GeoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC82C225927EF9007385EF /* GeoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,12 +51,13 @@
 		C2536AE4258FC5DE0070ACF7 /* AlbumsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsCell.swift; sourceTree = "<group>"; };
 		C2536AF4258FE6130070ACF7 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		C2536AF8258FE7180070ACF7 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
-		C27C2B0A2590D7FC0004C627 /* GeoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoViewController.swift; sourceTree = "<group>"; };
-		C27C2B112590E0260004C627 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		C2966EFA25910A7A00BEBDFF /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
+		C2CE168E25928D1A0046A051 /* DownloadAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAlert.swift; sourceTree = "<group>"; };
+		C2CE169525928EC60046A051 /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
 		C2CEA0F02590B490005A0E3B /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		C2CEA0F32590B498005A0E3B /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		C2EC82BC25927A16007385EF /* FavAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavAlbumCell.swift; sourceTree = "<group>"; };
+		C2EC82C225927EF9007385EF /* GeoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,8 +161,12 @@
 		C2536AEB258FC6AE0070ACF7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C27C2B082590D7D40004C627 /* Albums */,
-				C27C2B0A2590D7FC0004C627 /* GeoViewController.swift */,
+				C2536AE1258FC5CE0070ACF7 /* AlbumsViewController.swift */,
+				C2966EFA25910A7A00BEBDFF /* FavouriteViewController.swift */,
+				C20A28E5258E18880009F634 /* PhotoListViewController.swift */,
+				C2536AF4258FE6130070ACF7 /* PhotoViewController.swift */,
+				C2EC82C225927EF9007385EF /* GeoViewController.swift */,
+				C2536AEC258FC6B70070ACF7 /* Cells */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -179,21 +185,10 @@
 			isa = PBXGroup;
 			children = (
 				C2536AF8258FE7180070ACF7 /* ImageScrollView.swift */,
-				C27C2B112590E0260004C627 /* LocationManager.swift */,
+				C2CE168E25928D1A0046A051 /* DownloadAlert.swift */,
+				C2CE169525928EC60046A051 /* ActionView.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		C27C2B082590D7D40004C627 /* Albums */ = {
-			isa = PBXGroup;
-			children = (
-				C2536AE1258FC5CE0070ACF7 /* AlbumsViewController.swift */,
-				C2966EFA25910A7A00BEBDFF /* FavouriteViewController.swift */,
-				C20A28E5258E18880009F634 /* PhotoListViewController.swift */,
-				C2536AF4258FE6130070ACF7 /* PhotoViewController.swift */,
-				C2536AEC258FC6B70070ACF7 /* Cells */,
-			);
-			path = Albums;
 			sourceTree = "<group>";
 		};
 		C2CEA0EF2590B478005A0E3B /* Realm */ = {
@@ -327,9 +322,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C27C2B0B2590D7FC0004C627 /* GeoViewController.swift in Sources */,
+				C2EC82C325927EF9007385EF /* GeoViewController.swift in Sources */,
 				C2536AE2258FC5CE0070ACF7 /* AlbumsViewController.swift in Sources */,
-				C27C2B122590E0260004C627 /* LocationManager.swift in Sources */,
 				C20A28E3258E18810009F634 /* PhotoCell.swift in Sources */,
 				C20A28E6258E18880009F634 /* PhotoListViewController.swift in Sources */,
 				C20A28DD258E15790009F634 /* AlbumModel.swift in Sources */,
@@ -340,10 +334,12 @@
 				C2536ADD258FC2D40070ACF7 /* PhotoModel.swift in Sources */,
 				C20A28BD258E10D90009F634 /* AppDelegate.swift in Sources */,
 				C2966EFB25910A7A00BEBDFF /* FavouriteViewController.swift in Sources */,
+				C2CE169625928EC60046A051 /* ActionView.swift in Sources */,
 				C20A28BF258E10D90009F634 /* SceneDelegate.swift in Sources */,
 				C2CEA0F42590B498005A0E3B /* RealmModel.swift in Sources */,
 				C2536AF5258FE6130070ACF7 /* PhotoViewController.swift in Sources */,
 				C2EC82BD25927A16007385EF /* FavAlbumCell.swift in Sources */,
+				C2CE168F25928D1A0046A051 /* DownloadAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
