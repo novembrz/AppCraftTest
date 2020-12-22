@@ -27,6 +27,12 @@ class RealmManager {
         }
     }
     
+    static func deleteAll(_ albums: Results<AlbumRealmModel>) {
+        try! realm.write {
+            realm.delete(albums)
+        }
+    }
+    
 }
 
 

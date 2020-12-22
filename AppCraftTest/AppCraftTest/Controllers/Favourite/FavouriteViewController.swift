@@ -20,6 +20,22 @@ class FavouriteViewController: UITableViewController {
         albums = realm.objects(AlbumRealmModel.self)
         tableView.reloadData()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        guard segue.identifier == "favPhotoListSegue" else {return}
+        let indexPath = tableView.indexPathForSelectedRow!
+        let favPhotoVC = segue.destination as! FavPhotoViewController
+        favPhotoVC.photos = albums[indexPath.row].photos
+    }
+    
+    @IBAction func deleteAllAlbumsTapped(_ sender: UIBarButtonItem) {
+        RealmManager.deleteAll(albums)
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
 
     // MARK: - Table view data source
 
@@ -47,5 +63,9 @@ class FavouriteViewController: UITableViewController {
             RealmManager.deleteObject(album)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "favPhotoListSegue", sender: self)
     }
 }

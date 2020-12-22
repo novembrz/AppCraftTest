@@ -9,6 +9,7 @@ import UIKit
 
 class PhotoViewController: UIViewController {
     
+    var imageData: Data?
     var imageString: String?
     var imageView = UIImageView()
     
@@ -36,17 +37,29 @@ class PhotoViewController: UIViewController {
         ])
     }
     
+    
     func getImage(){
         
-        guard let imageString = imageString else {return}
-        
-        DispatchQueue.global().async {
-            guard let imageURL = URL(string: imageString) else {return}
-            guard let imageData = try? Data(contentsOf: imageURL) else {return}
+        if imageString == nil {
+            DispatchQueue.global().async {
+                guard let imageData = self.imageData else {return}
+                
+                DispatchQueue.main.async {
+                    guard let image = UIImage(data: imageData) else {return}
+                    self.imageScrollView.centerImage(image: image)
+                }
+            }
+        } else {
+            guard let imageString = imageString else {return}
             
-            DispatchQueue.main.async {
-                guard let image = UIImage(data: imageData) else {return}
-                self.imageScrollView.centerImage(image: image)
+            DispatchQueue.global().async {
+                guard let imageURL = URL(string: imageString) else {return}
+                guard let imageData = try? Data(contentsOf: imageURL) else {return}
+                
+                DispatchQueue.main.async {
+                    guard let image = UIImage(data: imageData) else {return}
+                    self.imageScrollView.centerImage(image: image)
+                }
             }
         }
     }

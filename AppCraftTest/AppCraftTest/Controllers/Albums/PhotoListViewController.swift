@@ -58,7 +58,7 @@ class PhotoListViewController: UITableViewController {
         guard let albumTitle = albumTitle else {return}
         let favPhotos = List<PhotoRealmModel>()
         
-        DispatchQueue.global().async {
+        DispatchQueue.global().sync {
             
             for el in self.photos{
                 guard let imageURL = URL(string: el.url) else {return}
