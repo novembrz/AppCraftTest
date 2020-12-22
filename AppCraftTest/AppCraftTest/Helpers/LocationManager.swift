@@ -8,7 +8,8 @@
 import CoreLocation
 import CoreMotion
 
-final class LocationService: NSObject, CLLocationManagerDelegate {
+class LocationService: NSObject, CLLocationManagerDelegate {
+    
     private let locationManager = CLLocationManager()
     private let motionManager = CMMotionActivityManager()
     

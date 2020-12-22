@@ -17,7 +17,6 @@
 		C20A28DD258E15790009F634 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20A28DC258E15790009F634 /* AlbumModel.swift */; };
 		C20A28E3258E18810009F634 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20A28E2258E18810009F634 /* PhotoCell.swift */; };
 		C20A28E6258E18880009F634 /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20A28E5258E18880009F634 /* PhotoListViewController.swift */; };
-		C243001E2591F53D002C84DB /* FavPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243001D2591F53D002C84DB /* FavPhotoCell.swift */; };
 		C2536ADD258FC2D40070ACF7 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2536ADC258FC2D40070ACF7 /* PhotoModel.swift */; };
 		C2536AE2258FC5CE0070ACF7 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2536AE1258FC5CE0070ACF7 /* AlbumsViewController.swift */; };
 		C2536AE5258FC5DE0070ACF7 /* AlbumsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2536AE4258FC5DE0070ACF7 /* AlbumsCell.swift */; };
@@ -26,10 +25,9 @@
 		C27C2B0B2590D7FC0004C627 /* GeoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27C2B0A2590D7FC0004C627 /* GeoViewController.swift */; };
 		C27C2B122590E0260004C627 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27C2B112590E0260004C627 /* LocationManager.swift */; };
 		C2966EFB25910A7A00BEBDFF /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2966EFA25910A7A00BEBDFF /* FavouriteViewController.swift */; };
-		C2966EFE25910A8D00BEBDFF /* FavPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2966EFD25910A8D00BEBDFF /* FavPhotoViewController.swift */; };
-		C2966F0225910BA500BEBDFF /* FavAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2966F0125910BA500BEBDFF /* FavAlbumCell.swift */; };
 		C2CEA0F12590B490005A0E3B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CEA0F02590B490005A0E3B /* RealmManager.swift */; };
 		C2CEA0F42590B498005A0E3B /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CEA0F32590B498005A0E3B /* RealmModel.swift */; };
+		C2EC82BD25927A16007385EF /* FavAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC82BC25927A16007385EF /* FavAlbumCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +45,6 @@
 		C20A28DC258E15790009F634 /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
 		C20A28E2258E18810009F634 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		C20A28E5258E18880009F634 /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
-		C243001D2591F53D002C84DB /* FavPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavPhotoCell.swift; sourceTree = "<group>"; };
 		C2536ADC258FC2D40070ACF7 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		C2536AE1258FC5CE0070ACF7 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		C2536AE4258FC5DE0070ACF7 /* AlbumsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsCell.swift; sourceTree = "<group>"; };
@@ -56,10 +53,9 @@
 		C27C2B0A2590D7FC0004C627 /* GeoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoViewController.swift; sourceTree = "<group>"; };
 		C27C2B112590E0260004C627 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		C2966EFA25910A7A00BEBDFF /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
-		C2966EFD25910A8D00BEBDFF /* FavPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavPhotoViewController.swift; sourceTree = "<group>"; };
-		C2966F0125910BA500BEBDFF /* FavAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavAlbumCell.swift; sourceTree = "<group>"; };
 		C2CEA0F02590B490005A0E3B /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		C2CEA0F32590B498005A0E3B /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		C2EC82BC25927A16007385EF /* FavAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavAlbumCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,25 +138,6 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		C24300192591F4D7002C84DB /* Favourite */ = {
-			isa = PBXGroup;
-			children = (
-				C2966EFA25910A7A00BEBDFF /* FavouriteViewController.swift */,
-				C2966EFD25910A8D00BEBDFF /* FavPhotoViewController.swift */,
-				C243001A2591F4E5002C84DB /* Cells */,
-			);
-			path = Favourite;
-			sourceTree = "<group>";
-		};
-		C243001A2591F4E5002C84DB /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				C2966F0125910BA500BEBDFF /* FavAlbumCell.swift */,
-				C243001D2591F53D002C84DB /* FavPhotoCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
 		C2536AE7258FC6560070ACF7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				C27C2B082590D7D40004C627 /* Albums */,
-				C24300192591F4D7002C84DB /* Favourite */,
 				C27C2B0A2590D7FC0004C627 /* GeoViewController.swift */,
 			);
 			path = Controllers;
@@ -193,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				C2536AE4258FC5DE0070ACF7 /* AlbumsCell.swift */,
+				C2EC82BC25927A16007385EF /* FavAlbumCell.swift */,
 				C20A28E2258E18810009F634 /* PhotoCell.swift */,
 			);
 			path = Cells;
@@ -211,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				C2536AE1258FC5CE0070ACF7 /* AlbumsViewController.swift */,
+				C2966EFA25910A7A00BEBDFF /* FavouriteViewController.swift */,
 				C20A28E5258E18880009F634 /* PhotoListViewController.swift */,
 				C2536AF4258FE6130070ACF7 /* PhotoViewController.swift */,
 				C2536AEC258FC6B70070ACF7 /* Cells */,
@@ -350,7 +328,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C27C2B0B2590D7FC0004C627 /* GeoViewController.swift in Sources */,
-				C2966F0225910BA500BEBDFF /* FavAlbumCell.swift in Sources */,
 				C2536AE2258FC5CE0070ACF7 /* AlbumsViewController.swift in Sources */,
 				C27C2B122590E0260004C627 /* LocationManager.swift in Sources */,
 				C20A28E3258E18810009F634 /* PhotoCell.swift in Sources */,
@@ -359,15 +336,14 @@
 				C20A28D9258E12B70009F634 /* NetworkManager.swift in Sources */,
 				C2CEA0F12590B490005A0E3B /* RealmManager.swift in Sources */,
 				C2536AF9258FE7180070ACF7 /* ImageScrollView.swift in Sources */,
-				C2966EFE25910A8D00BEBDFF /* FavPhotoViewController.swift in Sources */,
 				C2536AE5258FC5DE0070ACF7 /* AlbumsCell.swift in Sources */,
 				C2536ADD258FC2D40070ACF7 /* PhotoModel.swift in Sources */,
 				C20A28BD258E10D90009F634 /* AppDelegate.swift in Sources */,
 				C2966EFB25910A7A00BEBDFF /* FavouriteViewController.swift in Sources */,
 				C20A28BF258E10D90009F634 /* SceneDelegate.swift in Sources */,
 				C2CEA0F42590B498005A0E3B /* RealmModel.swift in Sources */,
-				C243001E2591F53D002C84DB /* FavPhotoCell.swift in Sources */,
 				C2536AF5258FE6130070ACF7 /* PhotoViewController.swift in Sources */,
+				C2EC82BD25927A16007385EF /* FavAlbumCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

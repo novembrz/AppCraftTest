@@ -17,6 +17,8 @@ class PhotoListViewController: UITableViewController {
     var id: String?
     var albumTitle: String?
     
+    var favPhotos = List<PhotoRealmModel>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchData()
@@ -24,21 +26,27 @@ class PhotoListViewController: UITableViewController {
     
     func fetchData() {
         
-        activityIndicator.hidesWhenStopped = true
-        activityIndicator.isHidden = false
-        activityIndicator.startAnimating()
-        
-        guard let id = id else {return}
-        let urlString = "https://jsonplaceholder.typicode.com/photos?albumId=\(id)"
-        
-        NetworkManager.fetchPhotoData(urlString: urlString) { (photos) in
-            self.photos = photos
-
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-                self.activityIndicator.isHidden = true
-                self.activityIndicator.stopAnimating()
+        if favPhotos.isEmpty {
+            
+            activityIndicator.hidesWhenStopped = true
+            activityIndicator.isHidden = false
+            activityIndicator.startAnimating()
+            
+            guard let id = id else {return}
+            let urlString = "https://jsonplaceholder.typicode.com/photos?albumId=\(id)"
+            
+            NetworkManager.fetchPhotoData(urlString: urlString) { (photos) in
+                self.photos = photos
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    self.activityIndicator.isHidden = true
+                    self.activityIndicator.stopAnimating()
+                }
             }
+        } else {
+            saveAlbumButton.isEnabled = false
+            saveAlbumButton.tintColor = .clear
         }
     }
     
@@ -48,9 +56,14 @@ class PhotoListViewController: UITableViewController {
         
         let indexPath = tableView.indexPathForSelectedRow!
         let photoVC = segue.destination as! PhotoViewController
-
-        let photo = photos[indexPath.row]
-        photoVC.imageString = photo.url
+        
+        if favPhotos.isEmpty{
+            let photo = photos[indexPath.row]
+            photoVC.imageString = photo.url
+        } else {
+            let photo = favPhotos[indexPath.row]
+            photoVC.imageData = photo.imageData
+        }
     }
     
     @IBAction func saveAlbumButtonTapped(_ sender: UIBarButtonItem) {
@@ -83,15 +96,23 @@ class PhotoListViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return photos.count
+        if !favPhotos.isEmpty {
+            return favPhotos.count
+        } else {
+            return photos.count
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as! PhotoCell
         
-        let photo = photos[indexPath.row]
-        cell.configure(with: photo)
-
+        if !favPhotos.isEmpty {
+            let photo = favPhotos[indexPath.row]
+            cell.configureFav(with: photo)
+        }else {
+            let photo = photos[indexPath.row]
+            cell.configure(with: photo)
+        }
         return cell
     }
     

@@ -184,13 +184,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="8tC-rS-kbx" id="DSU-8H-ULn"/>
-                        <outlet property="saveAlbumButton" destination="JQp-1g-7C4" id="0lk-SS-jbP"/>
+                        <outlet property="saveAlbumButton" destination="JQp-1g-7C4" id="FhP-L8-ZHU"/>
                         <segue destination="7U0-vm-84I" kind="show" identifier="photoSegue" id="irv-b8-GZf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="arK-i2-0hB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1349.2753623188407" y="139.95535714285714"/>
+            <point key="canvasLocation" x="1458" y="527"/>
         </scene>
         <!--Photo View Controller-->
         <scene sceneID="GhY-tt-WP2">
@@ -206,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9n-Xy-Lcg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2339" y="250"/>
+            <point key="canvasLocation" x="2322" y="527"/>
         </scene>
         <!--Albums-->
         <scene sceneID="ALd-nt-y4F">
@@ -296,7 +296,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="titleLabel" destination="9xn-kL-orM" id="YhC-34-tkb"/>
+                                    <outlet property="titleLabel" destination="9xn-kL-orM" id="uia-iW-SMr"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -313,72 +313,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="YYO-n2-Awu" kind="show" identifier="favPhotoListSegue" id="YG3-ZJ-lgT"/>
+                        <segue destination="846-fV-wAD" kind="show" identifier="favPhotoListSegue" id="Mi4-qO-hJW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UEF-ZC-zod" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="563.768115942029" y="795.6521739130435"/>
-        </scene>
-        <!--Photos-->
-        <scene sceneID="D1k-zD-2oG">
-            <objects>
-                <tableViewController id="YYO-n2-Awu" customClass="FavPhotoViewController" customModule="AppCraftTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3M2-Px-phj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favPhotoCell" rowHeight="111" id="tK8-lo-7sx" customClass="FavPhotoCell" customModule="AppCraftTest" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="111"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tK8-lo-7sx" id="xW4-su-Khb">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="111"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vVY-qE-2kv">
-                                            <rect key="frame" x="0.0" y="0.0" width="185.66666666666666" height="111"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="vVY-qE-2kv" secondAttribute="height" multiplier="179:107" id="m06-XV-iCP"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZh-Pe-wIL">
-                                            <rect key="frame" x="205.66666666666663" y="11" width="188.33333333333337" height="89"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="FZh-Pe-wIL" firstAttribute="leading" secondItem="vVY-qE-2kv" secondAttribute="trailing" constant="20" id="1wv-5x-Ff3"/>
-                                        <constraint firstAttribute="bottom" secondItem="vVY-qE-2kv" secondAttribute="bottom" id="LSe-Zl-qgq"/>
-                                        <constraint firstItem="FZh-Pe-wIL" firstAttribute="bottom" secondItem="xW4-su-Khb" secondAttribute="bottomMargin" id="Mdl-68-YDz"/>
-                                        <constraint firstItem="vVY-qE-2kv" firstAttribute="width" secondItem="FZh-Pe-wIL" secondAttribute="width" multiplier="0.985841" id="fVm-Nz-3ii"/>
-                                        <constraint firstItem="vVY-qE-2kv" firstAttribute="top" secondItem="xW4-su-Khb" secondAttribute="top" id="koJ-rf-stF"/>
-                                        <constraint firstItem="FZh-Pe-wIL" firstAttribute="trailing" secondItem="xW4-su-Khb" secondAttribute="trailingMargin" id="qKn-dH-6ya"/>
-                                        <constraint firstItem="vVY-qE-2kv" firstAttribute="leading" secondItem="xW4-su-Khb" secondAttribute="leading" id="rJA-dF-1pD"/>
-                                        <constraint firstItem="FZh-Pe-wIL" firstAttribute="top" secondItem="xW4-su-Khb" secondAttribute="topMargin" id="vxV-EZ-Wio"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="favImageView" destination="vVY-qE-2kv" id="QN7-P6-Ytq"/>
-                                    <outlet property="favLabel" destination="FZh-Pe-wIL" id="had-AT-GtE"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="YYO-n2-Awu" id="sIc-2d-NwF"/>
-                            <outlet property="delegate" destination="YYO-n2-Awu" id="Jv0-s9-xop"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Photos" id="GlJ-q3-hHv"/>
-                    <connections>
-                        <segue destination="7U0-vm-84I" kind="show" identifier="favPhotoSegue" id="kjZ-U1-PHa"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c40-3V-Pek" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1349" y="797"/>
         </scene>
         <!--Geo-->
         <scene sceneID="DPk-NT-BrP">
@@ -392,7 +332,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="hhP-tQ-0ZR" kind="relationship" relationship="rootViewController" id="UAV-Qb-Xjl"/>
+                        <segue destination="hhP-tQ-0ZR" kind="relationship" relationship="rootViewController" id="voR-5J-sQg"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zw3-2w-w2W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -401,7 +341,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kjZ-U1-PHa"/>
+        <segue reference="Mi4-qO-hJW"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book.fill" catalog="system" width="128" height="102"/>

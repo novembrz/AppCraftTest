@@ -13,7 +13,6 @@ class FavouriteViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -26,8 +25,8 @@ class FavouriteViewController: UITableViewController {
         
         guard segue.identifier == "favPhotoListSegue" else {return}
         let indexPath = tableView.indexPathForSelectedRow!
-        let favPhotoVC = segue.destination as! FavPhotoViewController
-        favPhotoVC.photos = albums[indexPath.row].photos
+        let favPhotoVC = segue.destination as! PhotoListViewController
+        favPhotoVC.favPhotos = albums[indexPath.row].photos
     }
     
     @IBAction func deleteAllAlbumsTapped(_ sender: UIBarButtonItem) {

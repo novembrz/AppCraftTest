@@ -31,4 +31,18 @@ class PhotoCell: UITableViewCell {
             }
         }
     }
+    
+    func configureFav(with model: PhotoRealmModel){
+        
+        activityIndicator.isHidden = true
+        albumLabel.text = model.title
+        
+        DispatchQueue.global().sync  {
+            let imageData = model.imageThData
+            
+            DispatchQueue.main.async  {
+                self.albumImageView.image = UIImage(data: imageData)
+            }
+        }
+    }
 }
