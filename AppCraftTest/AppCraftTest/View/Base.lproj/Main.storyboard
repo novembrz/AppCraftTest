@@ -18,27 +18,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="EPF-hi-3ty">
-                            <rect key="frame" x="0.0" y="129" width="414" height="20"/>
+                            <rect key="frame" x="0.0" y="118" width="414" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </activityIndicatorView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="albumsCell" rowHeight="73" id="Pch-ix-G0h" customClass="AlbumsCell" customModule="AppCraftTest" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="73"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="albumsCell" rowHeight="62" id="Pch-ix-G0h" customClass="AlbumsCell" customModule="AppCraftTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="62"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pch-ix-G0h" id="pDV-iL-CQe">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="73"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDv-ek-3ID">
-                                            <rect key="frame" x="20" y="26.333333333333336" width="374" height="20.333333333333336"/>
+                                            <rect key="frame" x="20" y="21" width="374" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="XDv-ek-3ID" secondAttribute="bottom" constant="10" id="9Jw-fN-ku1"/>
                                         <constraint firstItem="XDv-ek-3ID" firstAttribute="leading" secondItem="pDV-iL-CQe" secondAttribute="leadingMargin" id="J3G-Kb-Bn3"/>
-                                        <constraint firstItem="XDv-ek-3ID" firstAttribute="centerY" secondItem="pDV-iL-CQe" secondAttribute="centerY" id="sOE-R7-3ju"/>
+                                        <constraint firstItem="XDv-ek-3ID" firstAttribute="top" secondItem="pDV-iL-CQe" secondAttribute="topMargin" constant="10" id="Mj7-SS-cMQ"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="XDv-ek-3ID" secondAttribute="trailing" id="taz-tl-cw2"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -174,7 +175,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Photos" id="h8M-SI-8R8">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="heart" catalog="system" id="JQp-1g-7C4">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="heart.fill" catalog="system" id="JQp-1g-7C4">
                             <connections>
                                 <action selector="saveAlbumButtonTapped:" destination="846-fV-wAD" id="mam-CK-BGR"/>
                             </connections>
@@ -273,24 +274,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favAlbumCell" rowHeight="84" id="rUy-kv-CQq" customClass="FavAlbumCell" customModule="AppCraftTest" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="84"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favAlbumCell" rowHeight="64" id="rUy-kv-CQq" customClass="FavAlbumCell" customModule="AppCraftTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rUy-kv-CQq" id="I5q-B5-gbB">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xn-kL-orM">
-                                            <rect key="frame" x="20" y="32" width="374" height="20.333333333333329"/>
+                                            <rect key="frame" x="20" y="21" width="374" height="22"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="9xn-kL-orM" firstAttribute="centerY" secondItem="I5q-B5-gbB" secondAttribute="centerY" id="CtF-HK-5GO"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="9xn-kL-orM" secondAttribute="bottom" constant="10" id="BOL-yF-FfG"/>
                                         <constraint firstItem="9xn-kL-orM" firstAttribute="trailing" secondItem="I5q-B5-gbB" secondAttribute="trailingMargin" id="GBk-Aq-o3c"/>
                                         <constraint firstItem="9xn-kL-orM" firstAttribute="leading" secondItem="I5q-B5-gbB" secondAttribute="leadingMargin" id="bWL-5h-lvd"/>
+                                        <constraint firstItem="9xn-kL-orM" firstAttribute="top" secondItem="I5q-B5-gbB" secondAttribute="topMargin" constant="10" id="gLB-oA-Hql"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -343,7 +345,6 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book.fill" catalog="system" width="128" height="102"/>
-        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="mappin.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="AccentColor">

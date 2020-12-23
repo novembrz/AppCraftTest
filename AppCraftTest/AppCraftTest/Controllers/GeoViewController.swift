@@ -26,6 +26,8 @@ class GeoViewController: UIViewController {
         lm.delegate = self
         lm.desiredAccuracy = kCLLocationAccuracyBest
         lm.requestWhenInUseAuthorization()
+        lm.pausesLocationUpdatesAutomatically = true
+        lm.showsBackgroundLocationIndicator = true
         return lm
     }()
     

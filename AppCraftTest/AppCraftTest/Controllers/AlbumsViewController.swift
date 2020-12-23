@@ -35,7 +35,6 @@ class AlbumsViewController: UITableViewController {
                 self.activityIndicator.stopAnimating()
             }
         }
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

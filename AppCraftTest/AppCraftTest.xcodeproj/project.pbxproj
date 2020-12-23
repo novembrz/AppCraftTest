@@ -25,8 +25,6 @@
 		C2536AF9258FE7180070ACF7 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2536AF8258FE7180070ACF7 /* ImageScrollView.swift */; };
 		C268422C2593824900F49DBA /* Rihanna.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C268422B2593824900F49DBA /* Rihanna.mp3 */; };
 		C2966EFB25910A7A00BEBDFF /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2966EFA25910A7A00BEBDFF /* FavouriteViewController.swift */; };
-		C2CE168F25928D1A0046A051 /* DownloadAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE168E25928D1A0046A051 /* DownloadAlert.swift */; };
-		C2CE169625928EC60046A051 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE169525928EC60046A051 /* ActionView.swift */; };
 		C2CEA0F12590B490005A0E3B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CEA0F02590B490005A0E3B /* RealmManager.swift */; };
 		C2CEA0F42590B498005A0E3B /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CEA0F32590B498005A0E3B /* RealmModel.swift */; };
 		C2EC82BD25927A16007385EF /* FavAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC82BC25927A16007385EF /* FavAlbumCell.swift */; };
@@ -56,8 +54,6 @@
 		C2536AF8258FE7180070ACF7 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
 		C268422B2593824900F49DBA /* Rihanna.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Rihanna.mp3; sourceTree = "<group>"; };
 		C2966EFA25910A7A00BEBDFF /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
-		C2CE168E25928D1A0046A051 /* DownloadAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAlert.swift; sourceTree = "<group>"; };
-		C2CE169525928EC60046A051 /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
 		C2CEA0F02590B490005A0E3B /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		C2CEA0F32590B498005A0E3B /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		C2EC82BC25927A16007385EF /* FavAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavAlbumCell.swift; sourceTree = "<group>"; };
@@ -191,8 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				C2536AF8258FE7180070ACF7 /* ImageScrollView.swift */,
-				C2CE168E25928D1A0046A051 /* DownloadAlert.swift */,
-				C2CE169525928EC60046A051 /* ActionView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -342,12 +336,10 @@
 				C238950D25936D9400119E7D /* DataFetcherServices.swift in Sources */,
 				C20A28BD258E10D90009F634 /* AppDelegate.swift in Sources */,
 				C2966EFB25910A7A00BEBDFF /* FavouriteViewController.swift in Sources */,
-				C2CE169625928EC60046A051 /* ActionView.swift in Sources */,
 				C20A28BF258E10D90009F634 /* SceneDelegate.swift in Sources */,
 				C2CEA0F42590B498005A0E3B /* RealmModel.swift in Sources */,
 				C2536AF5258FE6130070ACF7 /* PhotoViewController.swift in Sources */,
 				C2EC82BD25927A16007385EF /* FavAlbumCell.swift in Sources */,
-				C2CE168F25928D1A0046A051 /* DownloadAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
