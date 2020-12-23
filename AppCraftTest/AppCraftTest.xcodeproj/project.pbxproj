@@ -23,6 +23,7 @@
 		C2536AE5258FC5DE0070ACF7 /* AlbumsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2536AE4258FC5DE0070ACF7 /* AlbumsCell.swift */; };
 		C2536AF5258FE6130070ACF7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2536AF4258FE6130070ACF7 /* PhotoViewController.swift */; };
 		C2536AF9258FE7180070ACF7 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2536AF8258FE7180070ACF7 /* ImageScrollView.swift */; };
+		C268422C2593824900F49DBA /* Rihanna.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C268422B2593824900F49DBA /* Rihanna.mp3 */; };
 		C2966EFB25910A7A00BEBDFF /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2966EFA25910A7A00BEBDFF /* FavouriteViewController.swift */; };
 		C2CE168F25928D1A0046A051 /* DownloadAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE168E25928D1A0046A051 /* DownloadAlert.swift */; };
 		C2CE169625928EC60046A051 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE169525928EC60046A051 /* ActionView.swift */; };
@@ -53,6 +54,7 @@
 		C2536AE4258FC5DE0070ACF7 /* AlbumsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsCell.swift; sourceTree = "<group>"; };
 		C2536AF4258FE6130070ACF7 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		C2536AF8258FE7180070ACF7 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
+		C268422B2593824900F49DBA /* Rihanna.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Rihanna.mp3; sourceTree = "<group>"; };
 		C2966EFA25910A7A00BEBDFF /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		C2CE168E25928D1A0046A051 /* DownloadAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAlert.swift; sourceTree = "<group>"; };
 		C2CE169525928EC60046A051 /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		C20A28D6258E11820009F634 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				C268422B2593824900F49DBA /* Rihanna.mp3 */,
 				C20A28C5258E10DA0009F634 /* Assets.xcassets */,
 				C20A28CA258E10DA0009F634 /* Info.plist */,
 			);
@@ -272,6 +275,7 @@
 			files = (
 				C20A28C9258E10DA0009F634 /* LaunchScreen.storyboard in Resources */,
 				C20A28C6258E10DA0009F634 /* Assets.xcassets in Resources */,
+				C268422C2593824900F49DBA /* Rihanna.mp3 in Resources */,
 				C20A28C4258E10D90009F634 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

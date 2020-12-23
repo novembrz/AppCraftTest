@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import AVFoundation
 
 class GeoViewController: UIViewController {
 
@@ -17,6 +18,8 @@ class GeoViewController: UIViewController {
     
     var latitude: CLLocationDegrees!
     var longitude: CLLocationDegrees!
+    
+    var player: AVAudioPlayer?
     
     lazy var locationManager: CLLocationManager = {
         let lm = CLLocationManager()
@@ -31,21 +34,49 @@ class GeoViewController: UIViewController {
         
     }
     
+    private func playAudio(){
+        let urlString = Bundle.main.path(forResource: "Rihanna", ofType: "mp3")
+        do{
+            let shared = AVAudioSession.sharedInstance()
+            try shared.setMode(.default)
+            try shared.setActive(true, options: .notifyOthersOnDeactivation)
+            
+            guard let urlString = urlString else {return}
+            let url = URL(fileURLWithPath: urlString)
+            
+            player = try AVAudioPlayer(contentsOf: url)
+            
+            guard let player = player else {
+                return
+            }
+            player.play()
+            
+        }catch{
+            print("Something audio wrong")
+        }
+    }
+    
     @IBAction func geoButtonTapped(_ sender: UIButton) {
         
         geoState = !geoState
         
         if CLLocationManager.locationServicesEnabled(){
+            
             if geoState == true {
-                //  locationManager.requestLocation()
                 locationManager.startUpdatingLocation()
                 geoButton.setTitle("Stop search", for: .normal)
                 print("start UpdatingLocation")
+                
+                playAudio()
                 
             } else {
                 locationManager.stopUpdatingLocation()
                 geoButton.setTitle("Start search", for: .normal)
                 print("stop UpdatingLocation")
+                
+                if let player = player, player.isPlaying {
+                    player.stop()
+                }
             }
         }
     }
