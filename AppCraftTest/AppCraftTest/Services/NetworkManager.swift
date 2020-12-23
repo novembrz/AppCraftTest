@@ -9,33 +9,7 @@ import Foundation
 
 struct NetworkManager {
     
-    static func fetchAlbumsData(completion: @escaping (_ courses: [AlbumModel])->()){
-        
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/albums") else {return}
-        
-        let session = URLSession.shared
-        let task = session.dataTask(with: url) { (data, response, error) in
-            
-            guard let data = data, let response = response else {
-                if let error = error {
-                    print(error.localizedDescription)
-                }
-                return
-            }
-            print(response)
-            
-            do {
-                let decoder = JSONDecoder()
-                let albums = try decoder.decode([AlbumModel].self, from: data)
-                completion(albums)
-            } catch let error {
-                print("Error serialization json", error)
-            }
-        }
-        task.resume()
-    }
-    
-    static func fetchPhotoData(urlString: String, completion: @escaping (_ courses: [PhotoModel]) -> ()){
+    static func fetchData<T: Decodable>(urlString: String, completion: @escaping (T?) -> Void) {
         
         guard let url = URL(string: urlString) else {return}
         
@@ -50,15 +24,24 @@ struct NetworkManager {
             }
             print(response)
             
-            do {
-                let decoder = JSONDecoder()
-                let albums = try decoder.decode([PhotoModel].self, from: data)
-                completion(albums)
-            } catch let error {
-                print("Error serialization json", error)
-            }
+            let decoded = decodeJSON(type: T.self, from: data)
+            completion(decoded)
         }
         task.resume()
+        
+    }
+    
+    static func decodeJSON<T: Decodable>(type: T.Type, from: Data?) -> T? {
+        let decoder = JSONDecoder()
+        guard let data = from else {return nil}
+        
+        do {
+            let objects = try decoder.decode(type.self, from: data)
+            return objects
+        } catch let error {
+            print("Error serialization json", error)
+            return nil
+        }
     }
 }
 

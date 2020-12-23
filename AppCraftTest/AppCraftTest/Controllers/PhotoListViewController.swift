@@ -35,7 +35,8 @@ class PhotoListViewController: UITableViewController {
             guard let id = id else {return}
             let urlString = "https://jsonplaceholder.typicode.com/photos?albumId=\(id)"
             
-            NetworkManager.fetchPhotoData(urlString: urlString) { (photos) in
+            DataFetcherServices.fetchPhotosData(urlString: urlString) { (photos) in
+                guard let photos = photos else {return}
                 self.photos = photos
                 
                 DispatchQueue.main.async {
@@ -88,13 +89,17 @@ class PhotoListViewController: UITableViewController {
             
             let favAlbum = AlbumRealmModel(title: albumTitle, photos: favPhotos)
             RealmManager.saveObject(favAlbum)
-             
+            
             print("ВЫШЛО ВЫШЛО ВЫШЛО ВЫШЛО ВЫШЛО ВЫШЛО ВЫШЛО ВЫШЛО ВЫШЛО ВЫШЛО ВЫШЛО ВЫШЛО ВЫШЛО ВЫШЛО")
             print(Realm.Configuration.defaultConfiguration.fileURL!)
         }
+        
     }
     
-    func showAlert(){
+    //MARK: showAlert
+    
+    func showAlert(show: Bool){
+        
         let alert = UIAlertController(title: "Saving...", message: "Please wait!\nThe album is saved.", preferredStyle: .alert)
         let cancel = UIAlertAction(title: "Cancel", style: .cancel)
         
@@ -109,17 +114,22 @@ class PhotoListViewController: UITableViewController {
         alert.view.addConstraint(hight)
         alert.addAction(cancel)
         
-        present(alert, animated: true) {
-            let size = CGSize(width: 40, height: 40)
-            let point = CGPoint(x: alert.view.frame.width / 2 - size.width / 2,
-                                y: alert.view.frame.height / 2 - size.height / 2 + 10)
-            
-            let activityIndicator = UIActivityIndicatorView(frame: CGRect(origin: point, size: size))
-            activityIndicator.color = .gray
-            activityIndicator.startAnimating()
-            
-            alert.view.addSubview(activityIndicator)
+        if show == true {
+            present(alert, animated: true) {
+                let size = CGSize(width: 40, height: 40)
+                let point = CGPoint(x: alert.view.frame.width / 2 - size.width / 2,
+                                    y: alert.view.frame.height / 2 - size.height / 2 + 10)
+                
+                let activityIndicator = UIActivityIndicatorView(frame: CGRect(origin: point, size: size))
+                activityIndicator.color = .gray
+                activityIndicator.startAnimating()
+                
+                alert.view.addSubview(activityIndicator)
+            }
+        } else {
+            alert.dismiss(animated: false)
         }
+        
     }
 
     // MARK: - Table view data source

@@ -24,15 +24,18 @@ class AlbumsViewController: UITableViewController {
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
         
-        NetworkManager.fetchAlbumsData { (albums) in
+        DataFetcherServices.fetchAlbumsData(urlString: urlString) { (albums) in
+            
+            guard let albums = albums else {return}
             self.albums = albums
-
+            
             DispatchQueue.main.async {
                 self.tableView.reloadData()
                 self.activityIndicator.isHidden = true
                 self.activityIndicator.stopAnimating()
             }
         }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -17,6 +17,7 @@
 		C20A28DD258E15790009F634 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20A28DC258E15790009F634 /* AlbumModel.swift */; };
 		C20A28E3258E18810009F634 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20A28E2258E18810009F634 /* PhotoCell.swift */; };
 		C20A28E6258E18880009F634 /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20A28E5258E18880009F634 /* PhotoListViewController.swift */; };
+		C238950D25936D9400119E7D /* DataFetcherServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C238950C25936D9400119E7D /* DataFetcherServices.swift */; };
 		C2536ADD258FC2D40070ACF7 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2536ADC258FC2D40070ACF7 /* PhotoModel.swift */; };
 		C2536AE2258FC5CE0070ACF7 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2536AE1258FC5CE0070ACF7 /* AlbumsViewController.swift */; };
 		C2536AE5258FC5DE0070ACF7 /* AlbumsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2536AE4258FC5DE0070ACF7 /* AlbumsCell.swift */; };
@@ -46,6 +47,7 @@
 		C20A28DC258E15790009F634 /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
 		C20A28E2258E18810009F634 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		C20A28E5258E18880009F634 /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
+		C238950C25936D9400119E7D /* DataFetcherServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherServices.swift; sourceTree = "<group>"; };
 		C2536ADC258FC2D40070ACF7 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		C2536AE1258FC5CE0070ACF7 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		C2536AE4258FC5DE0070ACF7 /* AlbumsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsCell.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				C20A28D8258E12B70009F634 /* NetworkManager.swift */,
+				C238950C25936D9400119E7D /* DataFetcherServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				C2536AF9258FE7180070ACF7 /* ImageScrollView.swift in Sources */,
 				C2536AE5258FC5DE0070ACF7 /* AlbumsCell.swift in Sources */,
 				C2536ADD258FC2D40070ACF7 /* PhotoModel.swift in Sources */,
+				C238950D25936D9400119E7D /* DataFetcherServices.swift in Sources */,
 				C20A28BD258E10D90009F634 /* AppDelegate.swift in Sources */,
 				C2966EFB25910A7A00BEBDFF /* FavouriteViewController.swift in Sources */,
 				C2CE169625928EC60046A051 /* ActionView.swift in Sources */,
